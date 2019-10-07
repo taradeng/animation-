@@ -7,7 +7,24 @@ color yellow = #FAC02D;
 int a = -200;
 int b = 200;
 int c = 600;
-int cloud = -200;
+int cloud = 1000;
+int water = -100;
+int water2 = -200;
+int water3 = -300;
+int water4 = -400;
+int water5 = -500;
+int water6 = -600;
+int water7 = -700;
+int water8 = -800;
+int water9 = -900;
+int water10 = 1000;
+int water11 = -1100;
+int water12 = -1200;
+int water13 = -1300;
+int water14 = -1400;
+int water15 = -1500;
+int water16 = -1600;
+//int water17 = -1700;
 
 void setup() { //happens once at beginning, no more after 
   size(800, 600);
@@ -21,8 +38,6 @@ void draw() {  //happens throughout the sketch, 60 times/sec (action)
   ellipse(a, 400, 400, 400);
   ellipse(b, 400, 400, 400);
   ellipse(c, 400, 400, 400);
-  fill(dgreen);
-  rect(0, 350, 800, 250);
 
   a = a + 2;
   b = b + 2;
@@ -38,10 +53,113 @@ void draw() {  //happens throughout the sketch, 60 times/sec (action)
     c = -200;
   }
 
-  fill(#87D9E3);
-  ellipse(cloud, 100, 100, 100);
+fill(lblue); 
+ ellipse(water, 350, 100, 100);
+  ellipse(water2, 350, 100, 100);
+  ellipse(water3, 350, 100, 100);
+  ellipse(water4, 350, 100, 100);
+ellipse(water5, 350, 100, 100);
+ellipse(water6, 350, 100, 100);
+ellipse(water7, 350, 100, 100);
+ellipse(water8, 350, 100, 100);
+  ellipse(water9, 350, 100, 100);
+  ellipse(water10, 350, 100, 100);
+  ellipse(water11, 350, 100, 100);
+ellipse(water12, 350, 100, 100);
+ellipse(water13, 350, 100, 100);
+ellipse(water14, 350, 100, 100);
+ellipse(water15, 350, 100, 100);
+ellipse(water16, 350, 100, 100);
+//ellipse(water17, 350, 100, 100);
+
+  water = water + 3;
+  water2 = water2 + 3;
+  water3 = water3 + 3;
+  water4 = water4 + 3;
+  water5 = water5 + 3;
+  water6 = water6 + 3;
+  water7 = water7 + 3;
+  water8 = water8 + 3;
+  water9 = water9 + 3;
+  water10 = water10 + 3;
+  water11 = water11 + 3;
+  water12 = water12 + 3;
+  water13 = water13 + 3;
+  water14 = water14 + 3;
+  water15 = water15 + 3;
+  water16 = water16 + 3;
+  //water17 = water17 + 3;
+  
+  if (water >= 1000) {
+    water = -200;
+  }
+  if (water2 >= 1000) {
+    water2 = -200;
+  }
+  if (water3 >= 1000) {
+    water3 = -200;
+  }
+  
+   if (water4 >= 1000) {
+    water4 = -200;
+  }
+  if (water5 >= 1000) {
+    water5 = -200;
+  }
+  if (water6 >= 1000) {
+    water6 = -200;
+  }
+  if (water7 >= 1000) {
+    water7 = -200;
+  }
+  if (water8 >= 1000) {
+    water8 = -200;
+  }
+  if (water9 >= 1000) {
+    water9 = -200;
+  }
+  
+   if (water10 >= 1000) {
+    water10 = -200;
+  }
+  if (water11 >= 1000) {
+    water11 = -200;
+  }
+  if (water12 >= 1000) {
+    water12 = -200;
+  }
+    if (water13 >= 1000) {
+    water13 = -200;
+  }
+  if (water14 >= 1000) {
+    water14 = -200;
+  }
+  if (water15 >= 1000) {
+    water15 = -200;
+  }
+  if (water16 >= 1000) {
+    water16 = -200;
+  }
+  // if (water17 >= 1000) {
+    //water17 = -200;
+ // }
+  
+  
+    fill(yellow);
+  rect(0, 350, 800, 250);
+  
+
+  fill(150);
+  ellipse(cloud, 50, 100, 100);
+fill(235);
+  ellipse(cloud, 100, 300, 100);
+
 
   cloud = cloud - 2;
+  
+  if (cloud <=-200) {
+    cloud = 1000;
+  }
 }
 
 
