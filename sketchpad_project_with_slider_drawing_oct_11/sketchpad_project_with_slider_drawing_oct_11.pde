@@ -5,6 +5,8 @@ color turquoise = #2E9990;
 color lime = #BAE67E;
 color yellow = #F5FF8C;
 color drawingColor = indigo;
+float sliderY; //decimal
+float thickness;
 
 
 void setup() {
@@ -15,34 +17,62 @@ void setup() {
 
 void draw() {
   //slider circle
-    stroke(0);
-    strokeWeight(5);
-   //slider line
-     line(30, 100, 30, 300);
-    fill(250);
-    ellipse(30, 100, 18, 18);
-    
+  stroke(0);
+  strokeWeight(5);
+  //slider line
+  stroke(0);
+  strokeWeight(thickness);
+  if (mousePressed) {
+  line(pmouseX, pmouseY, mouseX, mouseY);
+  }
   
+  line(30, 100, 30, 300);
+  fill(250);
+  ellipse(30, 100, 18, 18);
+
+
 
   println(mouseX, mouseY);
 
   //drawing colour buttons
   strokeWeight(4);
   stroke(0);
-  fill(indigo);
+  if ( dist(100, 5, mouseX, mouseY) < 50 ) {
+    fill(indigo - 50);
+  } else {
+
+    fill(indigo);
+  }
   ellipse(100, 5, 100, 100);
 
-  fill(cobalt);
+  if ( dist(200, 5, mouseX, mouseY) < 50 ) {
+    fill(cobalt + 50);
+  } else {
+    fill(cobalt);
+  }
   ellipse(200, 5, 100, 100);
 
-  fill(turquoise);
+  if ( dist(300, 5, mouseX, mouseY) <50 ) {
+    fill(turquoise + 50);
+  } else {
+    fill(turquoise);
+  }
   ellipse(300, 5, 100, 100);
   
+if ( dist(400, 5, mouseX, mouseY) < 50 ) {
+  fill(lime - 50);
+} else {
   fill(lime);
+}
   ellipse(400, 5, 100, 100);
-  
+
+ if ( dist(500, 5, mouseX, mouseY) < 50 ) {
+  fill(yellow - 50);
+ } else {
   fill(yellow);
+ }
   ellipse(500, 5, 100, 100);
+ 
 
   //drawing line code on canvas
   strokeWeight(5);
@@ -67,19 +97,15 @@ void mouseReleased() {
     //background(turquoise);
     drawingColor = turquoise;
   }
-    
-    
+
+
   if (dist(400, 5, mouseX, mouseY) <= 50) {
     //background(lime);
     drawingColor = lime;
   }
-  
+
   if (dist(500, 5, mouseX, mouseY) <= 50) {
     //background(yellow);
     drawingColor = yellow;
-    
-   
-    
-    
   }
 }
