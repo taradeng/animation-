@@ -109,6 +109,12 @@ void draw() {
   }
 
   ellipse(500, 5, 100, 100);
+  
+ // indicator tactile: if ( dist(175, 525, mouseX, mouseY) > 575 ) {
+ //   fill(230);
+//  } else {
+ //   fill(255);
+  }
 
 
 
